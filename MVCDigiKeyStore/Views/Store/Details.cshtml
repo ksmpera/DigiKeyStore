@@ -1,0 +1,31 @@
+﻿@model MVCDigiKeyStore.Models.Product
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Product: @Model.ProductName</h2>
+
+<p> <img alt="@Model.ProductName" src="@Model.ProductUrl" />
+</p>
+<div id="album-details">
+<p>
+<em>Types:</em>
+ @Model.Type.Name
+</p>
+<p>
+<em>Suppliers:</em> 
+ @Model.Supplier.Name
+</p>
+<p>
+<em>Price:</em> 
+ @String.Format("{0:F}", Model.Price)
+</p>
+<p>
+<em>Stock:</em> 
+ @String.Format("{0}", Model.Stock)
+</p>
+<p class="button"> @Html.ActionLink("Add to cart", "AddToCart",
+"ShoppingCart", new { id = Model.ProductId }, "")
+</p>
+</div>

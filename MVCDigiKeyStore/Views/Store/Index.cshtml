@@ -1,0 +1,15 @@
+﻿@model IEnumerable<MVCDigiKeyStore.Models.Type>
+
+@{
+    ViewBag.Title = "Store";
+}
+
+<h3>Browse Types</h3>
+
+<p> Select from @Model.Count() types:</p>
+<ul>
+    @foreach (var type in Model)
+    { 
+       <li>@Html.ActionLink(type.Name, "Browse", new { type = type.Name })</li>
+    }
+</ul>

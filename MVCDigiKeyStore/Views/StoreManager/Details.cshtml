@@ -1,0 +1,45 @@
+﻿@model MVCDigiKeyStore.Models.Product
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Product</legend>
+
+    <div class="display-label"><b>Type</b></div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Type.Name)
+    </div>
+    <div class="display-label"><b>Supplier</b></div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Supplier.Name)
+    </div>
+
+    <div class="display-label"><b>ProductName</b></div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ProductName)
+   </div>
+   
+    <div class="display-label"><b>Price</b></div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Price)
+    </div>
+
+    <div class="display-label"><b>Stock</b></div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Stock)
+    </div>
+
+    <div class="display-label"><b>ProductUrl</b></div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ProductUrl)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ProductId}) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
